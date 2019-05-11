@@ -1,0 +1,50 @@
+<!-- Header section starts here-->
+<nav class="navbar navbar-inverse navbar-fixed-top header_override fixed-header_shadow">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+        aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand navbar_verride" href="#">
+        <img src="https://www.elmeasure.com/storage/app/media/logo-dark64.png" class="logo_width">
+      </a>
+    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <!--/.nav-collapse -->
+  </div>
+</nav>
+<!-- Header section ends here-->
+
+<!-- Card section starts here -->
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 col-md-4 col-lg-3 mt-4 margin_bottom_10px" *ngFor="let policy of policies">
+      <div class="card card-inverse card-info">
+        <img class="card-img-top" src="{{policy.img}}">
+        <div class="card-block">
+          <figure class="profile profile-inline">
+            <img src="{{policy.img}}" class="profile-avatar" alt="">
+          </figure>
+          <h4 class="card-title">{{policy.name}}</h4>
+          <div class="card-text">
+            {{policy.Paragraph}}
+          </div>
+        </div>
+        <div class="card-footer">
+          <small>{{policy.time}}</small>
+          <button class="btn btn-info float-right btn-sm left_10px">{{policy.follow}}</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Card section ends here -->
